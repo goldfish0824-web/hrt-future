@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="総合型選抜の自己PR文を書く前に、自分の三年間から事実を掘り出すためのワークシート。">
+<style>
+*{margin:0}
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>自己PR 素材棚卸しシート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#F5F4EE;
+  --surface:#FFFFFF;
+  --surface-2:#EDECE4;
+  --ink:#1A2320;
+  --ink-2:#4A5A53;
+  --ink-3:#78857E;
+  --line:#D9D9CF;
+  --line-2:#C4C5B9;
+  --board:#22493A;
+  --board-ink:#F3F6F3;
+  --board-soft:#E2EDE6;
+  --mark:#9C7614;
+  --mark-soft:#F6EDD4;
+  --danger:#A2442C;
+  --focus:#2F7A5C;
+  --shadow:0 1px 2px rgba(26,35,32,.06), 0 8px 24px -16px rgba(26,35,32,.30);
+  --serif:"Zen Old Mincho","Yu Mincho","YuMincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic","Meiryo",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#121815;
+    --surface:#1A211D;
+    --surface-2:#232B26;
+    --ink:#E7EAE5;
+    --ink-2:#AEBAB3;
+    --ink-3:#7E8A84;
+    --line:#2F3A34;
+    --line-2:#3D4A43;
+    --board:#7FB79A;
+    --board-ink:#101614;
+    --board-soft:#1D2B24;
+    --mark:#DFB55E;
+    --mark-soft:#2A2418;
+    --danger:#E4917A;
+    --focus:#7FB79A;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121815;
+  --surface:#1A211D;
+  --surface-2:#232B26;
+  --ink:#E7EAE5;
+  --ink-2:#AEBAB3;
+  --ink-3:#7E8A84;
+  --line:#2F3A34;
+  --line-2:#3D4A43;
+  --board:#7FB79A;
+  --board-ink:#101614;
+  --board-soft:#1D2B24;
+  --mark:#DFB55E;
+  --mark-soft:#2A2418;
+  --danger:#E4917A;
+  --focus:#7FB79A;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 96px}
+
+/* ---------- header ---------- */
+.masthead{padding:56px 0 28px;border-bottom:2px solid var(--ink);}
+.eyebrow{
+  font-size:11.5px;letter-spacing:.22em;font-weight:700;
+  color:var(--board);text-transform:none;margin:0 0 14px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(30px,5.4vw,42px);line-height:1.32;
+  margin:0 0 16px;letter-spacing:.01em;text-wrap:balance;
+}
+.lede{margin:0;max-width:62ch;color:var(--ink-2);font-size:15.5px}
+.lede strong{color:var(--ink);font-weight:700}
+
+/* ---------- teacher note ---------- */
+details.note{
+  margin:24px 0 0;border:1px solid var(--line-2);border-radius:3px;
+  background:var(--surface);
+}
+details.note>summary{
+  cursor:pointer;padding:12px 16px;font-weight:700;font-size:13.5px;
+  color:var(--board);list-style:none;display:flex;align-items:center;gap:8px;
+}
+details.note>summary::-webkit-details-marker{display:none}
+details.note>summary::before{content:"▸";font-size:11px;transition:transform .15s}
+details.note[open]>summary::before{transform:rotate(90deg)}
+details.note .body{padding:0 16px 16px;font-size:13.5px;color:var(--ink-2);line-height:1.9}
+details.note ol{margin:0;padding-left:1.3em}
+details.note li{margin-bottom:6px}
+
+/* ---------- progress rail ---------- */
+.rail{
+  position:sticky;top:0;z-index:20;background:var(--paper);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+  padding:9px 0;margin-bottom:8px;
+}
+.rail a{
+  font-size:12.5px;text-decoration:none;color:var(--ink-2);
+  padding:3px 9px;border-radius:2px;white-space:nowrap;
+}
+.rail a:hover{background:var(--board-soft);color:var(--board)}
+.rail .count{
+  margin-left:auto;font-size:12px;color:var(--ink-3);
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.rail .count b{color:var(--board);font-weight:700}
+
+/* ---------- steps ---------- */
+section.step{padding:44px 0 8px;border-top:1px solid var(--line);}
+section.step:first-of-type{border-top:none}
+.step-head{display:flex;gap:16px;align-items:baseline;margin-bottom:6px}
+.num{
+  flex:0 0 auto;width:30px;height:30px;border-radius:50%;
+  background:var(--board);color:var(--board-ink);
+  display:grid;place-items:center;font-size:13px;font-weight:700;
+  font-variant-numeric:tabular-nums;transform:translateY(4px);
+}
+h2{
+  font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.4;
+  margin:0;letter-spacing:.01em;
+}
+.rule{font-size:13.5px;color:var(--ink-2);margin:10px 0 22px 46px;max-width:60ch}
+.rule .flag{
+  display:inline-block;background:var(--mark-soft);color:var(--mark);
+  font-weight:700;padding:1px 7px;border-radius:2px;font-size:12.5px;
+  margin-right:6px;
+}
+
+/* ---------- grid (step1) ---------- */
+.tablewrap{overflow-x:auto;margin-left:0}
+table.tl{border-collapse:collapse;width:100%;min-width:620px}
+table.tl th{
+  font-size:12px;font-weight:700;color:var(--ink-2);text-align:left;
+  padding:6px 8px;border-bottom:1px solid var(--line-2);letter-spacing:.04em;
+}
+table.tl th.rowhead{width:150px}
+table.tl td{padding:4px;vertical-align:top;border-bottom:1px solid var(--line)}
+table.tl td.rowhead{
+  font-size:13px;font-weight:500;color:var(--ink);padding:12px 8px 12px 0;
+  width:150px;line-height:1.5;
+}
+table.tl td.rowhead small{display:block;color:var(--ink-3);font-size:11.5px;font-weight:400;line-height:1.5}
+
+/* ---------- fields ---------- */
+.field{margin-bottom:20px}
+.field>label{
+  display:block;font-size:14px;font-weight:500;margin-bottom:6px;line-height:1.65;
+}
+.field .hint{display:block;font-size:12.5px;color:var(--ink-3);font-weight:400;margin-top:2px}
+.qn{
+  color:var(--board);font-weight:700;font-variant-numeric:tabular-nums;
+  margin-right:8px;font-size:13px;
+}
+textarea,input[type=text]{
+  width:100%;font:inherit;font-size:14.5px;line-height:1.75;
+  color:var(--ink);background:var(--surface);
+  border:1px solid var(--line-2);border-radius:2px;
+  padding:9px 11px;resize:none;overflow:hidden;
+  transition:border-color .12s, box-shadow .12s;
+}
+textarea{min-height:2.9em}
+table.tl textarea{min-height:4.6em;font-size:13.5px}
+textarea:focus,input[type=text]:focus{
+  outline:none;border-color:var(--focus);
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 18%,transparent);
+}
+textarea::placeholder,input::placeholder{color:var(--ink-3);opacity:.75}
+
+/* ---------- question list ---------- */
+.qlist{display:grid;gap:2px;margin-left:46px}
+@media (max-width:640px){.qlist,.rule{margin-left:0}}
+
+/* ---------- episode cards ---------- */
+.cards{display:grid;gap:26px;margin-left:46px}
+@media (max-width:640px){.cards{margin-left:0}}
+.card{
+  background:var(--surface);border:1px solid var(--line-2);border-radius:3px;
+  padding:20px 20px 6px;box-shadow:var(--shadow);
+}
+.card>h3{
+  font-family:var(--serif);font-size:15.5px;font-weight:700;margin:0 0 16px;
+  padding-bottom:9px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:9px;
+}
+.card>h3 .tag{
+  background:var(--board);color:var(--board-ink);font-family:var(--sans);
+  font-size:11px;font-weight:700;padding:2px 8px;border-radius:2px;letter-spacing:.06em;
+}
+.field.key>label{color:var(--mark);font-weight:700}
+.field.key textarea{border-color:var(--mark);background:var(--mark-soft)}
+.checkrow{
+  display:flex;flex-wrap:wrap;gap:8px 20px;padding:12px 0 16px;
+  border-top:1px solid var(--line);margin-top:4px;
+}
+.checkrow label{display:flex;gap:7px;align-items:flex-start;font-size:13px;color:var(--ink-2);cursor:pointer;line-height:1.6}
+.checkrow input{margin:5px 0 0;accent-color:var(--board);flex:0 0 auto}
+
+/* ---------- example ---------- */
+.example{
+  margin:0 0 26px 46px;background:var(--board-soft);
+  border-left:3px solid var(--board);border-radius:0 3px 3px 0;
+  padding:14px 18px;font-size:13px;line-height:1.85;color:var(--ink-2);
+}
+@media (max-width:640px){.example{margin-left:0}}
+.example h4{
+  margin:0 0 8px;font-size:11.5px;letter-spacing:.14em;font-weight:700;
+  color:var(--board);font-family:var(--sans);
+}
+.example dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 14px}
+.example dt{font-weight:700;color:var(--ink-2);white-space:nowrap}
+.example dd{margin:0}
+.example .bad{color:var(--danger);text-decoration:line-through}
+
+/* ---------- output ---------- */
+.outcard{
+  background:var(--surface);border:1px solid var(--line-2);border-radius:3px;
+  padding:20px;margin-bottom:20px;box-shadow:var(--shadow);
+}
+.outcard h3{
+  font-family:var(--serif);font-size:16.5px;margin:0 0 4px;font-weight:700;
+}
+.outcard p.d{margin:0 0 14px;font-size:13px;color:var(--ink-2);line-height:1.8}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button{
+  font:inherit;font-size:13.5px;font-weight:700;font-family:var(--sans);
+  padding:8px 16px;border-radius:2px;cursor:pointer;
+  border:1px solid var(--board);background:var(--board);color:var(--board-ink);
+  transition:opacity .12s;
+}
+button:hover{opacity:.87}
+button.ghost{background:transparent;color:var(--board);}
+button.quiet{background:transparent;color:var(--ink-3);border-color:var(--line-2)}
+button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+a:focus-visible,textarea:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.outbox{
+  width:100%;min-height:9em;margin-top:14px;font-size:12.5px;line-height:1.8;
+  font-family:var(--sans);white-space:pre-wrap;overflow:auto;resize:vertical;
+  background:var(--surface-2);border:1px solid var(--line);border-radius:2px;padding:12px;
+  color:var(--ink);
+}
+.outbox[hidden]{display:none}
+.status{font-size:12.5px;color:var(--board);font-weight:700;line-height:1.6}
+.status.warn{color:var(--danger)}
+
+/* notice / gate */
+.notice{
+  margin:0 0 14px;padding:10px 13px;font-size:12.5px;line-height:1.75;
+  background:var(--mark-soft);border-left:3px solid var(--mark);
+  border-radius:0 2px 2px 0;color:var(--ink-2);
+}
+.notice b{color:var(--mark)}
+.gate{
+  margin:0 0 16px;padding:11px 13px;font-size:12.5px;line-height:1.8;
+  background:var(--surface-2);border:1px dashed var(--line-2);border-radius:2px;
+  color:var(--ink-2);
+}
+.gate b{color:var(--ink);display:block;margin-bottom:4px}
+.gate ul{margin:0;padding-left:1.25em}
+
+/* generator controls */
+.genrow{display:flex;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.genrow .mini{
+  flex:0 0 96px;font-size:12px;font-weight:700;color:var(--ink-2);
+  letter-spacing:.04em;
+}
+.genrow input[type=text]{flex:1 1 220px;width:auto;min-width:0}
+.genrow select{
+  flex:1 1 220px;min-width:0;font:inherit;font-size:14px;font-family:var(--sans);
+  padding:8px 11px;border:1px solid var(--line-2);border-radius:2px;
+  background:var(--surface);color:var(--ink);
+}
+.genrow select:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 18%,transparent)}
+button:disabled{opacity:.42;cursor:not-allowed}
+#revised{min-height:9em}
+
+/* folded card */
+details.fold{padding:0}
+details.fold>summary{
+  cursor:pointer;padding:18px 20px;font-family:var(--serif);font-size:16.5px;
+  font-weight:700;list-style:none;display:flex;align-items:center;gap:9px;
+}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::before{content:"▸";font-family:var(--sans);font-size:12px;color:var(--board);transition:transform .15s}
+details.fold[open]>summary::before{transform:rotate(90deg)}
+details.fold>*:not(summary){margin-left:20px;margin-right:20px}
+details.fold>*:last-child{margin-bottom:20px}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink-3);line-height:1.9;
+}
+footer b{color:var(--ink-2)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- print ---------- */
+@media print{
+  :root{--paper:#fff;--surface:#fff;--surface-2:#fff;--ink:#000;--ink-2:#333;--ink-3:#555;--line:#bbb;--line-2:#888;--board:#000;--board-ink:#fff;--board-soft:#f2f2f2;--mark:#000;--mark-soft:#f6f6f6;--shadow:none}
+  .rail,.btnrow,#outputs,.noprint{display:none!important}
+  body{font-size:11pt}
+  .wrap{max-width:none;padding:0}
+  section.step{break-inside:auto;page-break-inside:auto}
+  .card{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  textarea{min-height:3.4em;border:1px solid #999}
+  details.note{display:none}
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">総合型選抜／自己PR文</p>
+    <h1>素材棚卸しシート</h1>
+    <p class="lede">自己PR文が書けないのは、文章が下手だからではありません。<strong>書くための素材が手元に出ていない</strong>だけです。このシートは、AIに文章を直してもらう<em>前</em>に、自分の三年間から事実を掘り出すためのものです。<br>うまい言葉で書こうとしないでください。ここでは<strong>起きたことだけ</strong>を書きます。</p>
+
+    <details class="note">
+      <summary>先生へ ── このシートの使い方</summary>
+      <div class="body">
+        <ol>
+          <li><b>完成した文章ではなく、このシートを見てください。</b> 生徒の文を赤ペンで直す作業はAIでも成立しますが、「そこに書かれていない出来事」を思い出させられるのは、その生徒の三年間を見てきた先生だけです。</li>
+          <li><b>空欄が指導の入り口です。</b> Step 5 の「先生に見てもらう用」は、未記入の項目を一覧で出します。「ここ、あの時のあれがあるでしょう」の一言が、このシートで一番価値のある指導になります。</li>
+          <li><b>「知っている人・残っている記録」欄を必ず確認してください。</b> AI添削の最大のリスクは表現の稚拙さではなく、事実の水増しです。裏づけのない記述は、面接で本人が守れません。</li>
+          <li><b>データは端末のブラウザにだけ保存されます。</b> サーバーには何も送信されません。共有したいときは Step 5 の出力をコピーして渡してください。</li>
+        </ol>
+      </div>
+    </details>
+  </header>
+
+  <nav class="rail" aria-label="ステップ">
+    <a href="#s1">1 時系列</a>
+    <a href="#s2">2 掘り起こし</a>
+    <a href="#s3">3 深掘り</a>
+    <a href="#s4">4 志望とつなぐ</a>
+    <a href="#s5">5 書き出す</a>
+    <span class="count">記入済み <b id="filled">0</b> / <span id="total">0</span></span>
+  </nav>
+
+  <main id="form"></main>
+
+  <section class="step" id="s5">
+    <div class="step-head">
+      <span class="num">5</span>
+      <h2>書き出す</h2>
+    </div>
+    <p class="rule">ここから先はAIに手伝ってもらって構いません。ただし<strong>渡すのは素材で、任せるのは推敲まで</strong>です。</p>
+
+    <div id="outputs">
+
+      <div class="outcard" id="card-ai" hidden>
+        <h3>下書きをつくる</h3>
+        <p class="notice"><b>これはAIが作る下書きです。</b>完成した提出物ではありません。事実の確認と、自分の言葉への書き直しは、必ず自分でやってください。</p>
+        <p class="d">ここまでに書いた素材をもとに、下書き・<strong>この下書きの弱いところ</strong>・<strong>面接で聞かれそうな質問</strong>の3点が返ってきます。</p>
+
+        <div class="gate" id="gate" hidden></div>
+
+        <div class="genrow">
+          <label class="mini" for="classcode">クラスコード</label>
+          <input type="text" id="classcode" placeholder="先生に配られたコード" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="genrow">
+          <label class="mini" for="task">何を書くか</label>
+          <select id="task">
+            <option value="高校生活で頑張ったことについて、日本語400字程度で書いてください。">高校生活で頑張ったこと／日本語400字</option>
+            <option value="高校生活で頑張ったことについて、英語200語程度で書いてください。">高校生活で頑張ったこと／英語200語</option>
+            <option value="自己PRを日本語400字程度で書いてください。">自己PR／日本語400字</option>
+            <option value="自己PRを日本語800字程度で書いてください。">自己PR／日本語800字</option>
+            <option value="志望理由を日本語600字程度で書いてください。">志望理由／日本語600字</option>
+            <option value="__custom">自分で条件を書く</option>
+          </select>
+        </div>
+        <div class="genrow" id="taskrow" hidden>
+          <label class="mini" for="taskfree">条件</label>
+          <input type="text" id="taskfree" placeholder="例：部活動での経験について、日本語300字程度で書いてください。">
+        </div>
+
+        <div class="btnrow">
+          <button type="button" id="btn-draft">下書きを作る</button>
+          <button type="button" class="ghost" data-copy="out-draft">コピー</button>
+          <span class="status" id="st-draft"></span>
+        </div>
+        <textarea class="outbox" id="out-draft" readonly hidden aria-label="AIが作った下書き"></textarea>
+      </div>
+
+      <div class="outcard" id="card-revise" hidden>
+        <h3>自分の言葉に直す</h3>
+        <p class="d">上の下書きを読んで、<strong>自分の言葉で書き直してください。</strong>そのまま提出はできません。言い回しが気に入らないところ、自分なら絶対にこうは言わないところを直すだけでも構いません。<br>ここが空のままだと、提出用テキストは作れません。</p>
+        <div class="field"><textarea id="revised" data-k="revised" data-label="自分で直した版" placeholder="ここに、自分の言葉で書き直した文章を入れる"></textarea></div>
+      </div>
+
+      <div class="outcard">
+        <h3>提出する</h3>
+        <p class="d">担任に出す一式を作ります。エピソードの要約と<strong>裏づけ（知っている人・記録）</strong>、<strong>まだ空いている項目の一覧</strong>、そしてAIの下書きと自分で直した版が並びます。<br>コピーして、ロイロノートのテキストカードに貼るか、提出フォームに貼ってください。</p>
+        <div class="btnrow">
+          <button type="button" data-gen="submit">提出用テキストを作る</button>
+          <button type="button" class="ghost" data-copy="out-submit">コピー</button>
+          <button type="button" class="quiet" id="btn-form" hidden>提出フォームを開く</button>
+          <button type="button" class="quiet" data-print="filled">記入済みで印刷</button>
+          <span class="status" id="st-submit"></span>
+        </div>
+        <textarea class="outbox" id="out-submit" readonly hidden aria-label="提出用テキスト"></textarea>
+      </div>
+
+      <details class="outcard fold">
+        <summary>自分でAIを使う場合の素材テキスト</summary>
+        <p class="d">上の「下書きをつくる」が使えないときは、こちらをコピーして、自分が使えるAIに貼り付けてください。素材と一緒に「守ってほしいこと」も出力します。<strong>この指示文は消さないでください。</strong>消すと、AIは書いていない事実を平気で足します。</p>
+        <div class="btnrow">
+          <button type="button" class="ghost" data-gen="ai">生成する</button>
+          <button type="button" class="ghost" data-copy="out-ai">コピー</button>
+          <span class="status" id="st-ai"></span>
+        </div>
+        <textarea class="outbox" id="out-ai" readonly hidden aria-label="AIに渡す素材テキスト"></textarea>
+      </details>
+
+      <div class="outcard">
+        <h3>保存と持ち出し</h3>
+        <p class="d">入力は自動でこの端末のブラウザに保存されます。別の端末で続けるときは、下のデータをコピーして持っていき、貼り付けてから「読み込む」を押してください。</p>
+        <div class="btnrow">
+          <button type="button" class="ghost" data-gen="json">保存データを出す</button>
+          <button type="button" class="ghost" data-load="1">貼り付けたデータを読み込む</button>
+          <button type="button" class="quiet" data-print="blank">白紙で印刷</button>
+          <button type="button" class="quiet" data-reset="1">全部消す</button>
+          <span class="status" id="st-json"></span>
+        </div>
+        <textarea class="outbox" id="out-json" hidden aria-label="保存データ" spellcheck="false"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <b>入力内容はこの端末のブラウザにだけ保存されます。</b>どこにも送信されません。共有パソコンで使ったときは、終わったら「全部消す」を押してください。<br>
+    自由に複製・改変してお使いください。
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+/* ==========================================================
+   先生へ：ここだけ書き換えてください
+   ========================================================== */
+const CONFIG = {
+  // Cloudflare Worker の URL。空のままだと「下書きをつくる」は表示されません。
+  // 例: "https://jikopr.example.workers.dev"
+  API_URL: "",
+
+  // 提出用 Google フォームの URL（任意）。空なら「提出フォームを開く」は出ません。
+  FORM_URL: "",
+};
+/* ========================================================== */
+
+
+/* ============ 設問の定義 ============ */
+
+const SCENES = [
+  ["jugyo",  "授業・教科",              "得意/苦手、発表、レポート、探究"],
+  ["bukatsu","部活動・同好会",          "役割、練習、大会、後輩との関係"],
+  ["gyoji",  "学校行事",                "文化祭、体育祭、修学旅行、合唱"],
+  ["iinkai", "委員会・生徒会・係",      "小さな係も書く"],
+  ["soto",   "学校の外",                "地域、バイト、家庭、習い事、趣味"],
+  ["gakugai","資格・検定・自分で調べたこと","独学、読んだ本、作ったもの"]
+];
+const YEARS = [["y1","1年"],["y2","2年"],["y3","3年"]];
+
+const QUESTIONS = [
+  "人から「ありがとう」と言われた場面は？　どんなに小さいことでもかまいません。",
+  "誰かに頼まれて引き受けたことは？　なぜ引き受けましたか。",
+  "誰にも言われていないのに、自分から始めたことは？",
+  "うまくいかなかったこと・途中でやめたことは？　そのあと、どうしましたか。",
+  "周りと意見が違ったとき、どうしましたか。",
+  "つい調べてしまうこと、人より時間をかけてしまうことは？",
+  "「またやってしまった」と繰り返している、自分のパターンは？",
+  "誰かの様子が変わったことに気づいた場面は？",
+  "面倒だと思われている役割を引き受けたことは？",
+  "中学の頃の自分と比べて、変わったところは？　きっかけは何でしたか。",
+  "悔しかった・腹が立った場面は？　なぜそう感じたのだと思いますか。",
+  "進路を考えるきっかけになった出来事・人・本・ニュースは？"
+];
+
+const EP_FIELDS = [
+  ["title", "この出来事を一行で",            "例：文化祭の準備が二週間止まった", false],
+  ["when",  "いつのことか",                  "例：2年生の9月",                   false],
+  ["situ",  "そのときの状況と、自分の立場",  "誰がいて、自分は何をする役だったか", false],
+  ["prob",  "何が問題だった／困っていたか",  "「大変だった」ではなく、何がどう詰まっていたか", false],
+  ["act",   "自分が実際にとった行動",        "動詞で書く。「頑張った」「努力した」は行動ではありません", false],
+  ["num",   "数字で言えること",              "人数・回数・期間・割合など。分かる範囲で",  false],
+  ["res",   "どうなったか",                  "うまくいかなかった部分も、そのまま書く",   false],
+  ["react", "周りの反応・言われた言葉",      "誰が、何と言ったか",                       false],
+  ["now",   "いま振り返って言えること",      "当時は気づかなかったこと",                 false],
+  ["proof", "これを知っている人・残っている記録", "先生や友人の名前、写真、記録、作品、提出物など", true]
+];
+
+const EP_CHECKS = [
+  "「なぜ？」と三回続けて聞かれても、自分の言葉で答えられる",
+  "盛っていない。ここに書いたことは全部、実際に起きた"
+];
+
+const ASPIRE = [
+  ["univ",   "志望大学・学部・学科",            "決まっていなければ、いま気になっているところ"],
+  ["learn",  "そこで学びたい具体的なこと",      "「◯◯学を学びたい」で止めない。その中の何を知りたいのか"],
+  ["link",   "そう思うきっかけになった出来事",  "Step 2 の問い番号、Step 3 のエピソード番号でも可"],
+  ["resource","大学の何と結びつくか",           "調べて書く：授業名、研究室、ゼミ、留学制度、施設など"],
+  ["after",  "卒業後にやってみたいこと",        "職業名でなくてもよい。どんな場面に関わりたいか"],
+  ["policy", "アドミッションポリシーで気になった言葉","そのまま抜き書きし、自分のどの経験と重なるか一言添える"]
+];
+
+/* ============ 描画 ============ */
+
+const form = document.getElementById("form");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function ta(key, label, ph, cls){
+  return '<div class="field'+(cls?" "+cls:"")+'">'
+    + '<label for="f-'+key+'">'+label+'</label>'
+    + '<textarea id="f-'+key+'" data-k="'+key+'" data-label="'+esc(label.replace(/<[^>]+>/g,""))+'" placeholder="'+esc(ph||"")+'"></textarea>'
+    + '</div>';
+}
+
+let html = "";
+
+/* --- Step 1 --- */
+html += '<section class="step" id="s1"><div class="step-head"><span class="num">1</span><h2>三年間を、事実だけで埋める</h2></div>'
+  + '<p class="rule"><span class="flag">ルール</span>評価は書かない。「頑張った」「成長した」は書かず、<strong>何をしたか</strong>だけを書きます。空欄があって当然です。まずは思い出せるものから。</p>'
+  + '<div class="tablewrap"><table class="tl"><thead><tr><th class="rowhead">場面</th>'
+  + YEARS.map(y=>'<th>'+y[1]+'</th>').join("")
+  + '</tr></thead><tbody>';
+SCENES.forEach(sc => {
+  html += '<tr><td class="rowhead">'+sc[1]+'<small>'+sc[2]+'</small></td>';
+  YEARS.forEach(y => {
+    const k = "tl-"+sc[0]+"-"+y[0];
+    html += '<td><textarea data-k="'+k+'" data-label="'+esc(sc[1]+"／"+y[1])+'" aria-label="'+esc(sc[1]+" "+y[1])+'"></textarea></td>';
+  });
+  html += '</tr>';
+});
+html += '</tbody></table></div></section>';
+
+/* --- Step 2 --- */
+html += '<section class="step" id="s2"><div class="step-head"><span class="num">2</span><h2>掘り起こしの問い</h2></div>'
+  + '<p class="rule"><span class="flag">ルール</span>全部埋める必要はありません。<strong>ひとつでも具体的な場面が出てくれば十分</strong>です。思いつかない問いは飛ばしてください。</p>'
+  + '<div class="qlist">';
+QUESTIONS.forEach((q,i) => {
+  const n = String(i+1).padStart(2,"0");
+  html += ta("q"+(i+1), '<span class="qn">'+n+'</span>'+esc(q), "");
+});
+html += '</div></section>';
+
+/* --- Step 3 --- */
+html += '<section class="step" id="s3"><div class="step-head"><span class="num">3</span><h2>三つ選んで、深く掘る</h2></div>'
+  + '<p class="rule"><span class="flag">ルール</span>Step 1・2 から、自分でも「これは説明できる」と思うものを三つ選びます。<strong>華やかな出来事である必要はありません。</strong>むしろ、うまくいかなかった話のほうが面接では強くなります。</p>'
+  + '<div class="example"><h4>記入例</h4><dl>'
+  + '<dt>行動</dt><dd><span class="bad">クラスをまとめるために頑張った</span> → 放課後に班長5人と15分ずつ話し、作業が止まっている工程を紙に書き出して貼った</dd>'
+  + '<dt>数字</dt><dd>班長5人／1人15分／残り9日／未着手の工程が3つ</dd>'
+  + '<dt>結果</dt><dd>2つは動いたが、装飾班だけ最後まで遅れた。当日は未完成のまま出した</dd>'
+  + '<dt>知っている人</dt><dd>担任の◯◯先生、文化祭実行委員の△△、当日の写真</dd>'
+  + '</dl></div>'
+  + '<div class="cards">';
+[1,2,3].forEach(n => {
+  html += '<div class="card"><h3><span class="tag">エピソード '+n+'</span></h3>';
+  EP_FIELDS.forEach(f => {
+    const label = esc(f[1]) + (f[2] ? '<span class="hint">'+esc(f[2])+'</span>' : "");
+    html += ta("ep"+n+"-"+f[0], label, "", f[3] ? "key" : "");
+  });
+  html += '<div class="checkrow">';
+  EP_CHECKS.forEach((c,ci) => {
+    const k = "ep"+n+"-chk"+ci;
+    html += '<label><input type="checkbox" data-c="'+k+'"><span>'+esc(c)+'</span></label>';
+  });
+  html += '</div></div>';
+});
+html += '</div></section>';
+
+/* --- Step 4 --- */
+html += '<section class="step" id="s4"><div class="step-head"><span class="num">4</span><h2>志望とつなぐ</h2></div>'
+  + '<p class="rule"><span class="flag">ルール</span>ここだけは<strong>調べないと書けません</strong>。大学のサイト、シラバス、パンフレットを開いてから書いてください。ここが埋まっていない自己PR文は、どの大学に出しても同じ文章になります。</p>'
+  + '<div class="qlist">';
+ASPIRE.forEach(a => {
+  html += ta("ap-"+a[0], esc(a[1]) + '<span class="hint">'+esc(a[2])+'</span>', "");
+});
+html += '</div></section>';
+
+form.innerHTML = html;
+
+/* ============ 入力の保存と復元 ============ */
+
+const KEY = "sozai-tanaoroshi-v1";
+const fields = Array.from(document.querySelectorAll("[data-k]"));
+const checks  = Array.from(document.querySelectorAll("[data-c]"));
+const sheetFields = fields.filter(f => f.closest("#form"));
+document.getElementById("total").textContent = sheetFields.length;
+
+function autosize(el){ el.style.height = "auto"; el.style.height = (el.scrollHeight + 2) + "px"; }
+
+function store(obj){
+  try { localStorage.setItem(KEY, JSON.stringify(obj)); return true; } catch(e){ return false; }
+}
+function restore(){
+  try { const raw = localStorage.getItem(KEY); return raw ? JSON.parse(raw) : null; } catch(e){ return null; }
+}
+function collect(){
+  const o = {};
+  fields.forEach(f => { if (f.value.trim()) o[f.dataset.k] = f.value; });
+  checks.forEach(c => { if (c.checked) o[c.dataset.c] = true; });
+  return o;
+}
+function apply(data){
+  if (!data || typeof data !== "object") return;
+  fields.forEach(f => { if (typeof data[f.dataset.k] === "string") f.value = data[f.dataset.k]; autosize(f); });
+  checks.forEach(c => { c.checked = data[c.dataset.c] === true; });
+  updateCount();
+}
+function updateCount(){
+  document.getElementById("filled").textContent = sheetFields.filter(f => f.value.trim()).length;
+  refreshGate();
+}
+
+let saveTimer = null;
+function scheduleSave(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => store(collect()), 400);
+}
+
+fields.forEach(f => {
+  f.addEventListener("input", () => { autosize(f); updateCount(); scheduleSave(); });
+  autosize(f);
+});
+checks.forEach(c => c.addEventListener("change", scheduleSave));
+
+apply(restore());
+
+/* ============ 出力 ============ */
+
+const val = k => { const el = document.querySelector('[data-k="'+k+'"]'); return el ? el.value.trim() : ""; };
+const chk = k => { const el = document.querySelector('[data-c="'+k+'"]'); return !!(el && el.checked); };
+
+function timelineText(){
+  const lines = [];
+  SCENES.forEach(sc => {
+    const parts = [];
+    YEARS.forEach(y => { const v = val("tl-"+sc[0]+"-"+y[0]); if (v) parts.push(y[1]+"：" + v.replace(/\n+/g," / ")); });
+    if (parts.length) lines.push("・" + sc[1] + " ── " + parts.join("　"));
+  });
+  return lines;
+}
+function questionText(){
+  const lines = [];
+  QUESTIONS.forEach((q,i) => {
+    const v = val("q"+(i+1));
+    if (v) lines.push("Q" + (i+1) + ". " + q + "\n　→ " + v.replace(/\n/g,"\n　  "));
+  });
+  return lines;
+}
+function episodeText(includeProof){
+  const blocks = [];
+  [1,2,3].forEach(n => {
+    const any = EP_FIELDS.some(f => val("ep"+n+"-"+f[0]));
+    if (!any) return;
+    const rows = ["【エピソード " + n + "】"];
+    EP_FIELDS.forEach(f => {
+      if (!includeProof && f[0] === "proof") return;
+      const v = val("ep"+n+"-"+f[0]);
+      if (v) rows.push(f[1] + "：" + v.replace(/\n/g," / "));
+    });
+    blocks.push(rows.join("\n"));
+  });
+  return blocks;
+}
+function aspireText(){
+  const lines = [];
+  ASPIRE.forEach(a => { const v = val("ap-"+a[0]); if (v) lines.push(a[1] + "：" + v.replace(/\n/g," / ")); });
+  return lines;
+}
+
+const GUARD = [
+  "【この下書きを作るときに、必ず守ってほしいこと】",
+  "1. ここに書いていない事実を足さないでください。数字・肩書き・エピソードの創作は禁止です。",
+  "2. 情報が足りないところは、文章で埋めずに「ここが足りない」と質問してください。",
+  "3. いきなり完成文を書かないでください。まず、どの素材を使うべきかを理由つきで提案してください。",
+  "4. 表現を直したときは、なぜ直したのかを一言そえてください。",
+  "5. 私が面接で説明できない言葉は使わないでください。かっこいい語に言い換えないでください。",
+  "6. 最後に、この文章で面接官が聞いてきそうな質問を5つ挙げてください。"
+].join("\n");
+
+function buildMaterial(){
+  const out = [];
+  const tl = timelineText();
+  if (tl.length){ out.push("■ 三年間にやったこと"); out.push(tl.join("\n")); out.push(""); }
+  const qs = questionText();
+  if (qs.length){ out.push("■ 掘り起こしの問いへの答え"); out.push(qs.join("\n\n")); out.push(""); }
+  const eps = episodeText(false);
+  if (eps.length){ out.push("■ 深掘りしたエピソード"); out.push(eps.join("\n\n")); out.push(""); }
+  const ap = aspireText();
+  if (ap.length){ out.push("■ 志望とのつながり"); out.push(ap.join("\n")); out.push(""); }
+  return out.join("\n").trim();
+}
+
+function buildAI(){
+  const material = buildMaterial();
+  if (!material) return "まだ何も記入されていません。Step 1 から埋めてから、もう一度押してください。";
+  return [
+    "これから自己PR文（総合型選抜）を書きます。以下は私が書き出した「素材」です。",
+    "", GUARD, "", "────────────────", "",
+    material,
+    "", "────────────────", "",
+    "まずは、どの素材を軸にすべきか提案してください。"
+  ].join("\n");
+}
+
+function buildTeacher(){
+  const out = [];
+  out.push("自己PR 素材棚卸しシート ── 先生確認用");
+  out.push("記入日：" + new Date().toLocaleDateString("ja-JP"));
+  out.push("");
+
+  out.push("■ 選んだエピソードと、その裏づけ");
+  let hasEp = false;
+  [1,2,3].forEach(n => {
+    const t = val("ep"+n+"-title");
+    const proof = val("ep"+n+"-proof");
+    const act = val("ep"+n+"-act");
+    if (!t && !act && !proof) return;
+    hasEp = true;
+    out.push("");
+    out.push("[" + n + "] " + (t || "（一行要約が未記入）"));
+    out.push("　　行動：" + (act || "（未記入）"));
+    out.push("　　知っている人・記録：" + (proof || "★ 未記入 ── 裏づけが取れていません"));
+    out.push("　　自己チェック：" +
+      (chk("ep"+n+"-chk0") ? "「なぜ」三回に答えられる ✓" : "「なぜ」三回に答えられる ✗") + "／" +
+      (chk("ep"+n+"-chk1") ? "盛っていない ✓" : "盛っていない ✗"));
+  });
+  if (!hasEp) out.push("（エピソードがまだ選ばれていません）");
+  out.push("");
+
+  out.push("■ 志望とのつながり");
+  const ap = aspireText();
+  out.push(ap.length ? ap.join("\n") : "（未記入）");
+  out.push("");
+
+  const blanks = [];
+  SCENES.forEach(sc => {
+    const empty = YEARS.filter(y => !val("tl-"+sc[0]+"-"+y[0])).map(y => y[1]);
+    if (empty.length) blanks.push("時系列／" + sc[1] + "：" + empty.join("・") + " が空欄");
+  });
+  QUESTIONS.forEach((q,i) => { if (!val("q"+(i+1))) blanks.push("問い " + (i+1) + "：" + q); });
+  [1,2,3].forEach(n => {
+    EP_FIELDS.forEach(f => { if (!val("ep"+n+"-"+f[0])) blanks.push("エピソード " + n + "：" + f[1] + " が空欄"); });
+  });
+  ASPIRE.forEach(a => { if (!val("ap-"+a[0])) blanks.push("志望／" + a[1] + " が空欄"); });
+
+  out.push("■ まだ空いているところ（" + blanks.length + " 件）");
+  out.push("※ ここが指導の入り口です。生徒が思い出せていないだけの可能性があります。");
+  out.push("");
+  out.push(blanks.length ? blanks.map(b => "・" + b).join("\n") : "空欄はありません。");
+
+  return out.join("\n");
+}
+
+/* ============ ボタン ============ */
+
+function show(id, text){
+  const box = document.getElementById(id);
+  box.value = text;
+  box.hidden = false;
+  box.style.height = "auto";
+  box.style.height = Math.min(box.scrollHeight + 4, 460) + "px";
+}
+function flash(id, msg, warn, ms){
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = msg;
+  el.classList.toggle("warn", !!warn);
+  clearTimeout(el._t);
+  el._t = setTimeout(() => { el.textContent = ""; el.classList.remove("warn"); }, ms || 2600);
+}
+
+/* ============ 下書きの生成（中継サーバー経由） ============ */
+
+function deviceId(){
+  let id = null;
+  try { id = localStorage.getItem("sozai-device"); } catch(e){}
+  if (!id){
+    id = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+       : String(Math.random()).slice(2) + "-" + Date.now();
+    try { localStorage.setItem("sozai-device", id); } catch(e){}
+  }
+  return id;
+}
+
+function gateMissing(){
+  const miss = [];
+  const okEp = [1,2,3].filter(n => val("ep"+n+"-title") && val("ep"+n+"-act") && val("ep"+n+"-proof")).length;
+  if (!timelineText().length) miss.push("Step 1 の時系列を、どこか1つでも埋める");
+  const qn = questionText().length;
+  if (qn < 3) miss.push("Step 2 の問いに3つ以上答える（いまは " + qn + " つ）");
+  if (!okEp) miss.push("Step 3 のエピソードを1つ、「この出来事を一行で」「自分が実際にとった行動」「知っている人・残っている記録」の3つまで埋める");
+  return miss;
+}
+
+function refreshGate(){
+  const card = document.getElementById("card-ai");
+  if (!card || card.hidden) return;
+  const miss = gateMissing();
+  const gate = document.getElementById("gate");
+  const btn  = document.getElementById("btn-draft");
+  if (miss.length){
+    gate.hidden = false;
+    gate.innerHTML = "<b>まだ下書きは作れません。素材がそろっていないと、AIは書いていないことを埋めてしまいます。</b><ul>"
+      + miss.map(m => "<li>" + m + "</li>").join("") + "</ul>";
+    btn.disabled = true;
+  } else {
+    gate.hidden = true;
+    btn.disabled = false;
+  }
+}
+
+function saveDraft(text){ try { localStorage.setItem("sozai-draft", text); } catch(e){} }
+
+async function generate(){
+  const btn  = document.getElementById("btn-draft");
+  const code = document.getElementById("classcode").value.trim();
+  if (!code){ flash("st-draft", "クラスコードを入れてください。", true); return; }
+
+  const sel  = document.getElementById("task");
+  const task = sel.value === "__custom" ? document.getElementById("taskfree").value.trim() : sel.value;
+  if (!task){ flash("st-draft", "どんな文章を書くのか、条件を入れてください。", true); return; }
+
+  const memo = buildMaterial();
+  const label = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "作成中…";
+  flash("st-draft", "考えています。30秒ほどかかります。", false, 40000);
+
+  try {
+    const r = await fetch(CONFIG.API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code: code, deviceId: deviceId(), task: task, memo: memo })
+    });
+    const d = await r.json().catch(() => ({ error: "サーバーからの返答を読み取れませんでした。" }));
+    if (!r.ok){ flash("st-draft", d.error || "うまくいきませんでした。", true, 10000); return; }
+
+    show("out-draft", d.text);
+    saveDraft(d.text);
+    document.getElementById("card-revise").hidden = false;
+    autosize(document.getElementById("revised"));
+    try { localStorage.setItem("sozai-code", code); } catch(e){}
+    flash("st-draft", "できました。今日はあと " + d.remaining + " 回使えます。", false, 8000);
+  } catch(e){
+    flash("st-draft", "サーバーにつながりませんでした。通信の状態を確かめて、もう一度試してください。", true, 8000);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = label;
+    refreshGate();
+  }
+}
+
+function setupGenerator(){
+  if (!CONFIG.API_URL) return;
+  document.getElementById("card-ai").hidden = false;
+  try {
+    const c = localStorage.getItem("sozai-code");
+    if (c) document.getElementById("classcode").value = c;
+    const d = localStorage.getItem("sozai-draft");
+    if (d){ show("out-draft", d); document.getElementById("card-revise").hidden = false; autosize(document.getElementById("revised")); }
+  } catch(e){}
+  document.getElementById("task").addEventListener("change", ev => {
+    document.getElementById("taskrow").hidden = ev.target.value !== "__custom";
+  });
+  document.getElementById("btn-draft").addEventListener("click", generate);
+  refreshGate();
+}
+
+function printSheet(mode){
+  if (mode !== "blank"){ window.print(); return; }
+  const savedF = fields.map(f => f.value);
+  const savedC = checks.map(c => c.checked);
+  fields.forEach(f => { f.value = ""; autosize(f); });
+  checks.forEach(c => { c.checked = false; });
+  window.print();
+  setTimeout(() => {
+    fields.forEach((f,i) => { f.value = savedF[i]; autosize(f); });
+    checks.forEach((c,i) => { c.checked = savedC[i]; });
+  }, 300);
+}
+
+document.addEventListener("click", ev => {
+  const t = ev.target.closest("button");
+  if (!t) return;
+
+  if (t.dataset.gen === "ai"){ show("out-ai", buildAI()); flash("st-ai","生成しました"); }
+
+  if (t.dataset.gen === "submit"){
+    const draft = document.getElementById("out-draft").value.trim();
+    const rev = val("revised");
+    if (draft && !rev){
+      flash("st-submit","「自分の言葉に直す」が空です。AIの下書きをそのまま提出することはできません。", true, 8000);
+      document.getElementById("revised").focus();
+      return;
+    }
+    const out = [buildTeacher()];
+    if (draft){
+      out.push("");
+      out.push("■ AIが作った下書き（未編集）");
+      out.push(draft);
+      out.push("");
+      out.push("■ 自分の言葉に直した版");
+      out.push(rev);
+    }
+    show("out-submit", out.join("\n"));
+    flash("st-submit","できました。コピーして提出してください。", false, 5000);
+  }
+
+  if (t.dataset.gen === "json"){
+    const box = document.getElementById("out-json");
+    box.hidden = false;
+    box.readOnly = false;
+    box.value = JSON.stringify(collect());
+    box.style.height = "140px";
+    flash("st-json","このテキストを保存しておいてください");
+  }
+
+  if (t.dataset.load){
+    const box = document.getElementById("out-json");
+    box.hidden = false;
+    box.readOnly = false;
+    const raw = box.value.trim();
+    if (!raw){ flash("st-json","先に保存データを貼り付けてください"); box.focus(); return; }
+    try {
+      const data = JSON.parse(raw);
+      apply(data);
+      store(collect());
+      flash("st-json","読み込みました");
+    } catch(e){ flash("st-json","データの形式が違うようです"); }
+  }
+
+  if (t.dataset.copy){
+    const box = document.getElementById(t.dataset.copy);
+    if (box.hidden || !box.value){ flash("st-"+t.dataset.copy.replace("out-",""),"先に生成してください"); return; }
+    const done = () => flash("st-"+t.dataset.copy.replace("out-",""),"コピーしました");
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(box.value).then(done, () => { box.select(); done(); });
+    } else { box.select(); try { document.execCommand("copy"); } catch(e){} done(); }
+  }
+
+  if (t.dataset.print){ printSheet(t.dataset.print); }
+
+  if (t.id === "btn-form" && CONFIG.FORM_URL){ window.open(CONFIG.FORM_URL, "_blank", "noopener"); }
+
+  if (t.dataset.reset){
+    if (t.dataset.armed === "1"){
+      fields.forEach(f => { f.value = ""; autosize(f); });
+      checks.forEach(c => { c.checked = false; });
+      try { localStorage.removeItem(KEY); localStorage.removeItem("sozai-draft"); } catch(e){}
+      const od = document.getElementById("out-draft");
+      od.value = ""; od.hidden = true;
+      document.getElementById("out-submit").hidden = true;
+      document.getElementById("card-revise").hidden = true;
+      updateCount();
+      t.dataset.armed = "";
+      t.textContent = "全部消す";
+      flash("st-json","消しました");
+    } else {
+      t.dataset.armed = "1";
+      t.textContent = "本当に消す？（もう一度押す）";
+      setTimeout(() => { if (t.dataset.armed === "1"){ t.dataset.armed = ""; t.textContent = "全部消す"; } }, 5000);
+    }
+  }
+});
+
+if (CONFIG.FORM_URL) document.getElementById("btn-form").hidden = false;
+setupGenerator();
+
+window.addEventListener("beforeunload", () => { clearTimeout(saveTimer); store(collect()); });
+</script>
+
+</body>
+</html>
