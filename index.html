@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="総合型選抜の自己PR文を書く前に、自分の三年間から事実を掘り出すためのワークシート。">
+<meta name="description" content="大学入試の志望理由書を書く前に、自分の三年間から事実を掘り出すためのワークシート。">
 <style>
 *{margin:0}
 html{-webkit-text-size-adjust:100%}
@@ -183,7 +183,7 @@ table.tl td.rowhead small{display:block;color:var(--ink-3);font-size:11.5px;font
   color:var(--board);font-weight:700;font-variant-numeric:tabular-nums;
   margin-right:8px;font-size:13px;
 }
-textarea,input[type=text]{
+textarea,input[type=text],input[type=number]{
   width:100%;font:inherit;font-size:14.5px;line-height:1.75;
   color:var(--ink);background:var(--surface);
   border:1px solid var(--line-2);border-radius:2px;
@@ -192,7 +192,7 @@ textarea,input[type=text]{
 }
 textarea{min-height:2.9em}
 table.tl textarea{min-height:4.6em;font-size:13.5px}
-textarea:focus,input[type=text]:focus{
+textarea:focus,input[type=text]:focus,input[type=number]:focus{
   outline:none;border-color:var(--focus);
   box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 18%,transparent);
 }
@@ -295,7 +295,7 @@ a:focus-visible,textarea:focus-visible,input:focus-visible,summary:focus-visible
   flex:0 0 96px;font-size:12px;font-weight:700;color:var(--ink-2);
   letter-spacing:.04em;
 }
-.genrow input[type=text]{flex:1 1 220px;width:auto;min-width:0}
+.genrow input[type=text],.genrow input[type=number]{flex:1 1 220px;width:auto;min-width:0}
 .genrow select{
   flex:1 1 220px;min-width:0;font:inherit;font-size:14px;font-family:var(--sans);
   padding:8px 11px;border:1px solid var(--line-2);border-radius:2px;
@@ -344,21 +344,10 @@ footer b{color:var(--ink-2)}
 <div class="wrap">
 
   <header class="masthead">
-    <p class="eyebrow">総合型選抜／自己PR文</p>
+    <p class="eyebrow">大学入試／志望理由書</p>
     <h1>素材棚卸しシート</h1>
-    <p class="lede">自己PR文が書けないのは、文章が下手だからではありません。<strong>書くための素材が手元に出ていない</strong>だけです。このシートは、AIに文章を直してもらう<em>前</em>に、自分の三年間から事実を掘り出すためのものです。<br>うまい言葉で書こうとしないでください。ここでは<strong>起きたことだけ</strong>を書きます。</p>
+    <p class="lede">志望理由書や自己PR文が書けないのは、文章が下手だからではありません。<strong>書くための素材が手元に出ていない</strong>だけです。このシートは、AIに文章を直してもらう<em>前</em>に、自分の三年間から事実を掘り出すためのものです。<br>うまい言葉で書こうとしないでください。ここでは<strong>起きたことだけ</strong>を書きます。</p>
 
-    <details class="note">
-      <summary>先生へ ── このシートの使い方</summary>
-      <div class="body">
-        <ol>
-          <li><b>完成した文章ではなく、このシートを見てください。</b> 生徒の文を赤ペンで直す作業はAIでも成立しますが、「そこに書かれていない出来事」を思い出させられるのは、その生徒の三年間を見てきた先生だけです。</li>
-          <li><b>空欄が指導の入り口です。</b> Step 5 の「先生に見てもらう用」は、未記入の項目を一覧で出します。「ここ、あの時のあれがあるでしょう」の一言が、このシートで一番価値のある指導になります。</li>
-          <li><b>「知っている人・残っている記録」欄を必ず確認してください。</b> AI添削の最大のリスクは表現の稚拙さではなく、事実の水増しです。裏づけのない記述は、面接で本人が守れません。</li>
-          <li><b>データは端末のブラウザにだけ保存されます。</b> サーバーには何も送信されません。共有したいときは Step 5 の出力をコピーして渡してください。</li>
-        </ol>
-      </div>
-    </details>
   </header>
 
   <nav class="rail" aria-label="ステップ">
@@ -393,19 +382,37 @@ footer b{color:var(--ink-2)}
           <input type="text" id="classcode" placeholder="先生に配られたコード" autocomplete="off" spellcheck="false">
         </div>
         <div class="genrow">
-          <label class="mini" for="task">何を書くか</label>
-          <select id="task">
-            <option value="高校生活で頑張ったことについて、日本語400字程度で書いてください。">高校生活で頑張ったこと／日本語400字</option>
-            <option value="高校生活で頑張ったことについて、英語200語程度で書いてください。">高校生活で頑張ったこと／英語200語</option>
-            <option value="自己PRを日本語400字程度で書いてください。">自己PR／日本語400字</option>
-            <option value="自己PRを日本語800字程度で書いてください。">自己PR／日本語800字</option>
-            <option value="志望理由を日本語600字程度で書いてください。">志望理由／日本語600字</option>
+          <label class="mini" for="topic">トピック</label>
+          <select id="topic">
+            <option value="志望理由">志望理由</option>
+            <option value="自己PR">自己PR</option>
+            <option value="高校生活で力を入れたこと">高校生活で力を入れたこと</option>
+            <option value="大学で学びたいこと">大学で学びたいこと</option>
+            <option value="将来やりたいこと">将来やりたいこと</option>
             <option value="__custom">自分で条件を書く</option>
           </select>
         </div>
-        <div class="genrow" id="taskrow" hidden>
-          <label class="mini" for="taskfree">条件</label>
-          <input type="text" id="taskfree" placeholder="例：部活動での経験について、日本語300字程度で書いてください。">
+        <div class="genrow" id="topicrow" hidden>
+          <label class="mini" for="topicfree">条件</label>
+          <input type="text" id="topicfree" placeholder="例：部活動を通して学んだこと">
+        </div>
+        <div class="genrow">
+          <label class="mini" for="chars">文字数</label>
+          <select id="chars">
+            <option value="100">100字</option>
+            <option value="200">200字</option>
+            <option value="300">300字</option>
+            <option value="400" selected>400字</option>
+            <option value="500">500字</option>
+            <option value="600">600字</option>
+            <option value="700">700字</option>
+            <option value="800">800字</option>
+            <option value="__custom">自分で文字数を入れる</option>
+          </select>
+        </div>
+        <div class="genrow" id="charsrow" hidden>
+          <label class="mini" for="charsfree">文字数</label>
+          <input type="number" id="charsfree" min="50" max="3000" step="10" placeholder="例：1200">
         </div>
 
         <div class="btnrow">
@@ -491,7 +498,7 @@ const SCENES = [
   ["bukatsu","部活動・同好会",          "役割、練習、大会、後輩との関係"],
   ["gyoji",  "学校行事",                "文化祭、体育祭、修学旅行、合唱"],
   ["iinkai", "委員会・生徒会・係",      "小さな係も書く"],
-  ["soto",   "学校の外",                "地域、バイト、家庭、習い事、趣味"],
+  ["soto",   "学校の外",                "地域、ボランティア、家庭、習い事、趣味"],
   ["gakugai","資格・検定・自分で調べたこと","独学、読んだ本、作ったもの"]
 ];
 const YEARS = [["y1","1年"],["y2","2年"],["y3","3年"]];
@@ -848,14 +855,30 @@ function refreshGate(){
 
 function saveDraft(text){ try { localStorage.setItem("sozai-draft", text); } catch(e){} }
 
+function buildTask(){
+  const tsel = document.getElementById("topic");
+  const topic = tsel.value === "__custom"
+    ? document.getElementById("topicfree").value.trim()
+    : tsel.value;
+  if (!topic) return "";
+
+  const csel = document.getElementById("chars");
+  const chars = csel.value === "__custom"
+    ? String(document.getElementById("charsfree").value || "").trim()
+    : csel.value;
+  const n = parseInt(chars, 10);
+  if (!n || n < 50) return "";
+
+  return topic + "について、日本語" + n + "字程度で書いてください。";
+}
+
 async function generate(){
   const btn  = document.getElementById("btn-draft");
   const code = document.getElementById("classcode").value.trim();
   if (!code){ flash("st-draft", "クラスコードを入れてください。", true); return; }
 
-  const sel  = document.getElementById("task");
-  const task = sel.value === "__custom" ? document.getElementById("taskfree").value.trim() : sel.value;
-  if (!task){ flash("st-draft", "どんな文章を書くのか、条件を入れてください。", true); return; }
+  const task = buildTask();
+  if (!task){ flash("st-draft", "トピックと文字数を指定してください。", true); return; }
 
   const memo = buildMaterial();
   const label = btn.textContent;
@@ -896,8 +919,11 @@ function setupGenerator(){
     const d = localStorage.getItem("sozai-draft");
     if (d){ show("out-draft", d); document.getElementById("card-revise").hidden = false; autosize(document.getElementById("revised")); }
   } catch(e){}
-  document.getElementById("task").addEventListener("change", ev => {
-    document.getElementById("taskrow").hidden = ev.target.value !== "__custom";
+  document.getElementById("topic").addEventListener("change", ev => {
+    document.getElementById("topicrow").hidden = ev.target.value !== "__custom";
+  });
+  document.getElementById("chars").addEventListener("change", ev => {
+    document.getElementById("charsrow").hidden = ev.target.value !== "__custom";
   });
   document.getElementById("btn-draft").addEventListener("click", generate);
   refreshGate();
